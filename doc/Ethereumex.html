@@ -1,0 +1,410 @@
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.16.1">
+    <title>Ethereumex – ethereumex v0.1.2</title>
+    <link rel="stylesheet" href="dist/app-4ecae1abb8.css" />
+    
+      <link rel="canonical" href="https://hexdocs.pm/ethereumex/Ethereumex.html" />
+    
+    <script src="dist/sidebar_items-26fe2dcbbc.js"></script>
+  </head>
+  <body data-type="modules">
+    <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
+
+    <div class="main">
+<button class="sidebar-toggle">
+  <span class="icon-menu" aria-hidden="true"></span>
+  <span class="sr-only">Toggle Sidebar</span>
+</button>
+<section class="sidebar">
+
+  
+  <a href="api-reference.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+        ethereumex
+      </h1>
+      <h2 class="sidebar-projectVersion">
+        v0.1.2
+      </h2>
+    </div>
+    
+  </a>
+
+  <div class="sidebar-search">
+    <span class="icon-search" aria-hidden="true"></span>
+    <input type="text" class="sidebar-searchInput" placeholder="search" aria-label="Search" autocomplete="off" />
+  </div>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+    
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+    
+
+    
+
+    
+
+    
+  </ul>
+  <div class="gradient"></div>
+  <ul id="full-list" class="sidebar-fullList"></ul>
+</section>
+
+<section class="content">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
+
+
+      <h1>
+        <small class="visible-xs">ethereumex v0.1.2</small>
+        Ethereumex
+        
+      </h1>
+
+      
+        <section id="moduledoc">
+          <h1>Ethereumex <a href="https://semaphoreci.com/ayrat555/ethereumex"><img src="https://semaphoreci.com/api/v1/ayrat555/ethereumex/branches/master/badge.svg" alt="Build Status"/></a></h1>
+<p>Elixir JSON-RPC client for the Ethereum blockchain</p>
+<h2 id="module-installation" class="section-heading">
+  <a href="#module-installation" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Installation
+</h2>
+
+<p>Add Ethereumex to your <code class="inline">mix.exs</code> dependencies:</p>
+<ol>
+<li>Add <code class="inline">ethereumex</code> to your list of dependencies in <code class="inline">mix.exs</code>:
+</li>
+</ol>
+<pre><code class="elixir">def deps do
+  [{:ethereumex, &quot;~&gt; 0.1.2&quot;}]
+end</code></pre>
+<ol start="2">
+<li>Ensure <code class="inline">ethereumex</code> is started before your application:
+</li>
+</ol>
+<pre><code class="elixir">def application do
+  [applications: [:ethereumex]]
+end</code></pre>
+<h2 id="module-configuration" class="section-heading">
+  <a href="#module-configuration" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Configuration
+</h2>
+
+<p>In <code class="inline">config/config.exs</code>, add Ethereum protocol host params to your config file</p>
+<pre><code class="elixir">config :ethereumex,
+  scheme: &quot;http&quot;,
+  host: &quot;localhost&quot;,
+  port: 8545</code></pre>
+<h2 id="module-usage" class="section-heading">
+  <a href="#module-usage" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Usage
+</h2>
+
+<h3>Available methods:</h3>
+<ul>
+<li>web3_clientVersion
+</li>
+<li>web3_sha3
+</li>
+<li>net_version
+</li>
+<li>net_peerCount
+</li>
+<li>net_listening
+</li>
+<li>eth_protocolVersion
+</li>
+<li>eth_syncing
+</li>
+<li>eth_coinbase
+</li>
+<li>eth_mining
+</li>
+<li>eth_hashrate
+</li>
+<li>eth_gasPrice
+</li>
+<li>eth_accounts
+</li>
+<li>eth_blockNumber
+</li>
+<li>eth_getBalance
+</li>
+<li>eth_getStorageAt
+</li>
+<li>eth_getTransactionCount
+</li>
+<li>eth_getBlockTransactionCountByHash
+</li>
+<li>eth_getBlockTransactionCountByNumber
+</li>
+<li>eth_getUncleCountByBlockHash
+</li>
+<li>eth_getUncleCountByBlockNumber
+</li>
+<li>eth_getCode
+</li>
+<li>eth_sign
+</li>
+<li>eth_sendTransaction
+</li>
+<li>eth_sendRawTransaction
+</li>
+<li>eth_call
+</li>
+<li>eth_estimateGas
+</li>
+<li>eth_getBlockByHash
+</li>
+<li>eth_getBlockByNumber
+</li>
+<li>eth_getTransactionByHash
+</li>
+<li>eth_getTransactionByBlockHashAndIndex
+</li>
+<li>eth_getTransactionByBlockNumberAndIndex
+</li>
+<li>eth_getTransactionReceipt
+</li>
+<li>eth_getUncleByBlockHashAndIndex
+</li>
+<li>eth_getUncleByBlockNumberAndIndex
+</li>
+<li>eth_getCompilers
+</li>
+<li>eth_compileLLL
+</li>
+<li>eth_compileSolidity
+</li>
+<li>eth_compileSerpent
+</li>
+<li>eth_newFilter
+</li>
+<li>eth_newBlockFilter
+</li>
+<li>eth_newPendingTransactionFilter
+</li>
+<li>eth_uninstallFilter
+</li>
+<li>eth_getFilterChanges
+</li>
+<li>eth_getFilterLogs
+</li>
+<li>eth_getLogs
+</li>
+<li>eth_getWork
+</li>
+<li>eth_submitWork
+</li>
+<li>eth_submitHashrate
+</li>
+<li>db_putString
+</li>
+<li>db_getString
+</li>
+<li>db_putHex
+</li>
+<li>db_getHex
+</li>
+<li>shh_post
+</li>
+<li>shh_version
+</li>
+<li>shh_newIdentity
+</li>
+<li>shh_hasIdentity
+</li>
+<li>shh_newGroup
+</li>
+<li>shh_addToGroup
+</li>
+<li>shh_newFilter
+</li>
+<li>shh_uninstallFilter
+</li>
+<li>shh_getFilterChanges
+</li>
+<li>shh_getMessages
+</li>
+</ul>
+<h3>Examples</h3>
+<pre><code class="elixir">iex&gt; Ethereumex.HttpClient.web3_client_version
+{:ok,
+ %{&quot;id&quot; =&gt; 0, &quot;jsonrpc&quot; =&gt; &quot;2.0&quot;,
+   &quot;result&quot; =&gt; &quot;Geth/v1.6.5-stable-cf87713d/darwin-amd64/go1.8.3&quot;}}
+
+iex&gt; Ethereumex.HttpClient.web3_sha3([&quot;wrong_param&quot;])
+{:error,
+ %{&quot;code&quot; =&gt; -32602,
+   &quot;message&quot; =&gt; &quot;invalid argument 0: missing 0x prefix for hex data&quot;}}
+
+iex&gt; Ethereumex.HttpClient.eth_get_balance([&quot;0x407d73d8a49eeb85d32cf465507dd71d507100c1&quot;, &quot;latest&quot;])
+{:ok, %{&quot;id&quot; =&gt; 2, &quot;jsonrpc&quot; =&gt; &quot;2.0&quot;, &quot;result&quot; =&gt; &quot;0x0&quot;}}</code></pre>
+<p>Note that all method names are snakecases, so, for example, shh_getMessages method has corresponding Ethereumex.HttpClient.shh_get_messages/1 method</p>
+<h3>Custom requests</h3>
+<p>Many Ethereum protocol implementations support additional JSON-RPC API methods. To use them, you should call Ethereumex.HttpClient.send_request/2 method.</p>
+<p>For example, let’s call geth’s rpc_modules method.</p>
+<pre><code class="elixir">iex&gt; Ethereumex.HttpClient.send_request(&quot;rpc_modules&quot;)
+{:ok,
+ %{&quot;id&quot; =&gt; 5, &quot;jsonrpc&quot; =&gt; &quot;2.0&quot;,
+   &quot;result&quot; =&gt; %{&quot;eth&quot; =&gt; &quot;1.0&quot;, &quot;net&quot; =&gt; &quot;1.0&quot;, &quot;rpc&quot; =&gt; &quot;1.0&quot;,
+     &quot;web3&quot; =&gt; &quot;1.0&quot;}}}</code></pre>
+<h2 id="module-contributing" class="section-heading">
+  <a href="#module-contributing" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Contributing
+</h2>
+
+<ol>
+<li><a href="http://github.com/ayrat555/ethereumex/fork">Fork it!</a>
+</li>
+<li>Create your feature branch (<code class="inline">git checkout -b my-new-feature</code>)
+</li>
+<li>Commit your changes (<code class="inline">git commit -am &#39;Add some feature&#39;</code>)
+</li>
+<li>Push to the branch (<code class="inline">git push origin my-new-feature</code>)
+</li>
+<li>Create new Pull Request
+</li>
+</ol>
+<h2 id="module-author" class="section-heading">
+  <a href="#module-author" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Author
+</h2>
+
+<p>Ayrat Badykov (@ayrat555)</p>
+<h2 id="module-license" class="section-heading">
+  <a href="#module-license" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  License
+</h2>
+
+<p>Ethereumex is released under the MIT License.</p>
+
+        </section>
+      
+
+      
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
+            </a>
+            Summary
+          </h1>
+          
+
+          
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#start/2">start(type, args)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Called when an application is started</p>
+</div>
+  
+</div>
+
+  </div>
+
+
+          
+
+        </section>
+      
+
+      
+
+      
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
+            </a>
+            Functions
+          </h1>
+          <div class="detail" id="start/2">
+  
+  <div class="detail-header">
+    <a href="#start/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">start(type, args)</span>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Called when an application is started.</p>
+<p>This function is called when an the application is started using
+<a href="https://hexdocs.pm/elixir/Application.html#start/2"><code class="inline">Application.start/2</code></a> (and functions on top of that, such as
+<a href="https://hexdocs.pm/elixir/Application.html#ensure_started/2"><code class="inline">Application.ensure_started/2</code></a>). This function should start the top-level
+process of the application (which should be the top supervisor of the
+application’s supervision tree if the application follows the OTP design
+principles around supervision).</p>
+<p><code class="inline">start_type</code> defines how the application is started:</p>
+<ul>
+<li><code class="inline">:normal</code> - used if the startup is a normal startup or if the application
+is distributed and is started on the current node because of a failover
+from another mode and the application specification key <code class="inline">:start_phases</code>
+is <code class="inline">:undefined</code>.
+</li>
+<li><code class="inline">{:takeover, node}</code> - used if the application is distributed and is
+started on the current node because of a failover on the node <code class="inline">node</code>.
+</li>
+<li><code class="inline">{:failover, node}</code> - used if the application is distributed and is
+started on the current node because of a failover on node <code class="inline">node</code>, and the
+application specification key <code class="inline">:start_phases</code> is not <code class="inline">:undefined</code>.
+</li>
+</ul>
+<p><code class="inline">start_args</code> are the arguments passed to the application in the <code class="inline">:mod</code>
+specification key (e.g., <code class="inline">mod: {MyApp, [:my_args]}</code>).</p>
+<p>This function should either return <code class="inline">{:ok, pid}</code> or <code class="inline">{:ok, pid, state}</code> if
+startup is successful. <code class="inline">pid</code> should be the PID of the top supervisor. <code class="inline">state</code>
+can be an arbitrary term, and if omitted will default to <code class="inline">[]</code>; if the
+application is later stopped, <code class="inline">state</code> is passed to the <code class="inline">stop/1</code> callback (see
+the documentation for the <code class="inline">c:stop/1</code> callback for more information).</p>
+<p><code class="inline">use Application</code> provides no default implementation for the <a href="#start/2"><code class="inline">start/2</code></a>
+callback.</p>
+<p>Callback implementation for <a href="https://hexdocs.pm/elixir/Application.html#c:start/2"><code class="inline">Application.start/2</code></a>.</p>
+
+  </section>
+</div>
+
+        </section>
+      
+
+      
+          <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.16.1),
+          </span>
+          <span class="line">
+            designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            </span>
+        </p>
+        <button class="night-mode-toggle"><span class="sr-only">Switch theme</span></button>
+      </footer>
+    </div>
+  </div>
+</section>
+</div>
+  <script src="dist/app-126b5f0e90.js"></script>
+  </body>
+</html>
+
