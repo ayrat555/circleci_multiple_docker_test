@@ -1,0 +1,13 @@
+{application,ethereumex,
+             [{applications,[kernel,stdlib,elixir,logger,poison,httpoison]},
+              {description,"Elixir JSON-RPC client for the Ethereum blockchain"},
+              {modules,['Elixir.Ethereumex',
+                        'Elixir.Ethereumex.Client.Behaviour',
+                        'Elixir.Ethereumex.Client.Macro',
+                        'Elixir.Ethereumex.Client.Server',
+                        'Elixir.Ethereumex.Config',
+                        'Elixir.Ethereumex.HttpClient']},
+              {registered,[]},
+              {vsn,"0.1.2"},
+              {extra_applications,[logger]},
+              {mod,{'Elixir.Ethereumex',[]}}]}.
