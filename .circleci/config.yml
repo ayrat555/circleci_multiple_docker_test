@@ -13,7 +13,7 @@ jobs:
       - checkout
       - restore_cache:
           key: _build
-      - run: mix local.hex --force
+      - run: mix local.rebar --force
       - run: mix deps.get
       - run: mix test --include eth --include batch
       - run: mix dialyzer
